@@ -1,0 +1,23 @@
+<div class="card">
+    <p class="h2">Ingrese los datos de registro</p>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <label class="form-label" for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre" [(ngModel)]="nombre">
+        <label class="form-label" for="apellido">Apellido</label>
+        <input class="form-control" type="text" formControlName="apellido" [(ngModel)]="apellido" required>
+        <label class="form-label" for="cedula">Cedula</label>
+        <input class="form-control" type="text" formControlName="cedula" [(ngModel)]="cedula" uired>
+        <label class="form-label" for="telefono">Telefono</label>
+        <input class="form-control" type="number" formControlName="telefono" [(ngModel)]="telefono" required>
+        <label class="form-label" for="correo">Correo</label>
+        <input class="form-control" type="email" formControlName="correo" [(ngModel)]="correo" required>
+        <label class="form-label" for="direccion">Dirección</label>
+        <input class="form-control" type="text" formControlName="direccion" [(ngModel)]="direccion" required>
+        <label class="form-label" for="usuario">Usuario</label>
+        <input class="form-control" type="text" formControlName="usuario" [(ngModel)]="usuario" required>
+        <label class="form-label" for="password">Contraseña</label>
+        <input class="form-control" type="password" formControlName="password" [(ngModel)]="password" id="password" required>
+        <button class="form-control" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+

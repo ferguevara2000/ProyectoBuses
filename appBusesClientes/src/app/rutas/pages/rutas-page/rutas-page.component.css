@@ -1,0 +1,17 @@
+.container-places{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tittle{
+    margin: 0 auto;  
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.next_trips{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

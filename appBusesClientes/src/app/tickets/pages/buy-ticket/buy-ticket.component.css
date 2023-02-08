@@ -1,0 +1,80 @@
+.card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: start;
+}
+
+.card-body p {
+  justify-self: start;
+}
+
+.buy-window{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: start;
+}
+
+.info-table{
+    margin: 20px;
+}
+
+
+.container-seat {
+  margin: 20px;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seats {
+  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.seat {
+  display: flex;
+  flex: 0 0 14.28%;
+  padding: 5px;
+  position: relative;
+}
+
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  line-height: 1.5rem;
+  padding: 4px 0;
+  background: #5bfc60;
+  border-radius: 5px;
+  color: black;
+}
+
+.seat label:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0px 2px green;
+}
+
+.seat input[type="checkbox"] {
+  position: absolute;
+}
+.seat input[type="checkbox"]:checked + label {
+  background: #656e65;
+}
+
+.total-container{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+}
+
+.total{
+  align-self: flex-end;
+}

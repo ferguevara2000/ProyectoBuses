@@ -1,0 +1,64 @@
+<div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="true" ><strong>Itinerario de Viaje</strong></a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <p><strong>Fecha:</strong> {{data.fecha}}</p>
+      <p><strong>Cooperativa:</strong> {{data.cooperativa}}</p>
+      <p><strong>Telefono:</strong> {{data.telefono}}</p>
+      <p><strong>Hora de Salida:</strong> {{data.horaSalida}}</p>
+      <p><strong>Hora de Arribo:</strong> {{data.horaArribo}}</p>
+      <p><strong>Origen:</strong> {{data.origen}}</p>
+      <p><strong>Destino:</strong> {{data.destino}}</p>
+      <p><strong>Asientos Disponibles:</strong> {{data.numAsientosDisponibles}}</p>
+      <p><strong>Capacidad del bus:</strong> {{data.capacidad}}</p>
+      <p><strong>Numero de unidad:</strong> {{data.numero}}</p>
+      <p><strong>Numero de paradas:</strong> {{data.numParadas}}</p>
+    </div>
+  </div>
+  <div class="buy-window">
+    <div class="card container-seat">
+        <p class="p-2"><strong>Seleccione un asiento</strong></p>
+        <ol class="seats">
+            <li class="seat" *ngFor="let data of dataAsientos">
+              <input type="checkbox" id="{{data.num}}" (change)="capturar($event)"/>
+              <label for="{{data.num}}">{{data.numero}}</label>
+            </li>
+          </ol>
+      </div>
+      <div class="card info-table">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Recargo</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let fila of dataCompra">
+                <td *ngFor="let columna of columns">{{fila[columna.field]}}</td>
+                <td><button type="button" class="btn btn-danger" (click)="eliminarBoleto(fila['idAsiento'])">
+                  <i class="bi bi-trash3-fill"></i>
+                </button>
+              </td>
+              </tr>
+              <tr *ngIf="showTotal">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong>Total</strong></td>
+                <td><strong>{{total}}$</strong></td>
+                <td><button class="btn btn-primary" (click)="comprarBoleto()">Comprar</button></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>

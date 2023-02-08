@@ -1,0 +1,28 @@
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.search_tickets{
+    display: flex;
+    align-items: center;
+    background: url('../../../../assets/img/fondo_home.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.card{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 5px;
+}
+
+.card-header{
+    font-weight: bold;
+}
+
+.btn{
+    width: 100%;
+}
